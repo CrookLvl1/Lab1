@@ -1,0 +1,5 @@
+C:\Users\админ\source\repos\Lab1\x64\Release\Lab1.vcxproj.AssemblyReference.cache
+C:\Users\админ\source\repos\Lab1\x64\Release\Lab1.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\админ\source\repos\Lab1\x64\Release\Lab1.Form1.resources
+C:\Users\админ\source\repos\Lab1\x64\Release\Lab1.vcxproj.GenerateResource.cache
+C:\Users\админ\source\repos\Lab1\x64\Release\Lab1.exe
