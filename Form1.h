@@ -92,6 +92,7 @@ namespace CppCLRWinFormsProject {
 	{
 	public:
 		int mainVar = 1;
+
 		Form1(void)
 		{
 			InitializeComponent();
@@ -102,10 +103,10 @@ namespace CppCLRWinFormsProject {
 
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::TextBox^ left;
+	private: System::Windows::Forms::TextBox^ right;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ root1;
-	private: System::Windows::Forms::TextBox^ right;
 	private: System::Windows::Forms::Label^ root1Sec;
 	private: System::Windows::Forms::Label^ root2Sec;
 	private: System::Windows::Forms::Label^ label11;
@@ -149,6 +150,7 @@ namespace CppCLRWinFormsProject {
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
+		/// 
 		void InitializeComponent(void)
 		{
 			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
@@ -374,8 +376,8 @@ namespace CppCLRWinFormsProject {
 			this->Controls->Add(this->left);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->chart1);
 			this->Name = L"Form1";
 			this->Text = L"Application";
@@ -385,6 +387,7 @@ namespace CppCLRWinFormsProject {
 
 		}
 #pragma endregion
+
 	bool constructed = false;
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Построение графика
@@ -412,7 +415,7 @@ namespace CppCLRWinFormsProject {
 		//Игнорирование нажатой кнопки при ошибке валидации значений
 		if (leftStr->Length == 0 || rightStr->Length == 0 || !(isAllDigits(leftStr)) || !(isAllDigits(rightStr))) return;
 		double left = System::Convert::ToDouble(leftStr), right = System::Convert::ToDouble(rightStr);
-		if (System::Convert::ToInt32(left) - System::Convert::ToInt32(right) == 0) return;
+		if (right > left || left - right == 0) return;
 	
 		RootData root1;
 		RootData root2;
