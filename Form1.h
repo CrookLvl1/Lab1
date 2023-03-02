@@ -398,7 +398,7 @@ namespace CppCLRWinFormsProject {
 		while (x >= a && x <= b) {
 			y = func(x);
 			this->chart1->Series[0]->Points->AddXY(x, y);
-			x += h; 
+			x += h;
 		}
 		//После построение графика появляется кнопка
 		constructed = true;
@@ -406,7 +406,7 @@ namespace CppCLRWinFormsProject {
 
 
 	}
-	
+
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ leftStr = this->left->Text->Replace('.', ',');
 		String^ rightStr = this->right->Text->Replace('.', ',');
@@ -415,8 +415,8 @@ namespace CppCLRWinFormsProject {
 		//Игнорирование нажатой кнопки при ошибке валидации значений
 		if (leftStr->Length == 0 || rightStr->Length == 0 || !(isAllDigits(leftStr)) || !(isAllDigits(rightStr))) return;
 		double left = System::Convert::ToDouble(leftStr), right = System::Convert::ToDouble(rightStr);
-		if (right > left || left - right == 0) return;
-	
+		if (left > right || left - right == 0) return;
+
 		RootData root1;
 		RootData root2;
 		RootData root1Sec;
@@ -450,7 +450,7 @@ namespace CppCLRWinFormsProject {
 					tempLeft += step;
 				}
 				if (left >= right) root1.root = root2.root = root1Sec.root = root2Sec.root = NULL;
-				
+
 			}
 		}
 		//
