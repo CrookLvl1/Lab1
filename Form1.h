@@ -449,7 +449,7 @@ namespace CppCLRWinFormsProject {
 
 					tempLeft += step;
 				}
-				if (left >= right) root1.root = root2.root = root1Sec.root = root2Sec.root = NULL;
+				if (tempLeft >= right) root1.root = root2.root = root1Sec.root = root2Sec.root = NULL;
 
 			}
 		}
